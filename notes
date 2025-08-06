@@ -1,0 +1,44 @@
+Rendering Pipeline: "A vertex/line/triangle journey from 3D data to your 2D screen"
+
+1. Vertex Specification = Where we set up our geometry on the CPU
+2. Vertex Shader = Execute on each vertex, positioning that vertex
+3. Tessellation (Optional) = Add more triangles into our gemoetry (adds more detail)
+4. Geometry Shader (Optional) = Generate more geometry/more points
+5. Vertex Post-Processing = Modifying data
+6. Primitive Assembly = Assembling the final geometry
+7. Rasterization = Determining which pixels actually get filled in
+8. Fragment Shader = Executing once on each fragment (pixel)
+9. Per-Sample Operations = Depth Test, Cutting
+
+In Short:
+1. Specify our geometry
+2. Position our geometry
+3. Optionally Modify our geometry first by adding more detail
+4. Optionally second by creating more geometry
+5. Modify some data living in the buffer
+6. Assemble our primitive
+7. Coloring things in
+8. Controlling how things are colored in
+9. Final clean up/testing
+
+Shader = Programmable part of our pipeline
+    - Feature of Modern Opengl that we can write programs on our gpu to control the graphics pipeline
+
+
+
+SDL2:
+    Render a window
+    Hold or display output from OpenGL Context (One big object that holds everything used in OpenGL)
+    Frame Buffer holds the commands
+    Handles Inputs + Outputs
+    Setting up subsystems: Sound, Networking, Images
+    Threading
+
+
+1. Initialize the scene
+2. Main loop
+    - Input
+    - Updates
+    - Render
+        - Pre-Render
+3. Clean up
